@@ -10,8 +10,14 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+
       <Router>
+        <nav>
+          <li><Link to={'/'}>Main</Link></li>
+          <li><Link to={'/about'}>About</Link></li>
+          <li><Link to={'/users'}>Users</Link></li>
+        </nav>
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/about' element={<About />} />
